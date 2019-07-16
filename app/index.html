@@ -17,11 +17,20 @@
 </head>
 
 <body>
-
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <p><textarea id="top-text"></textarea></p>
+      <p></p><textarea id="bottom-text"></textarea></p>
+      <p></p><input type="file" id="image-input" accet="image/*"></p>
+      <p><button id="create-meme-btn">Make Meme!</button></p>
+      <p><canvas id="meme-canvas"></canvas></p>
+    </div>
+  </div>
+</div> 
   <!-- build:js scripts/vendor.js -->
   <!-- endbuild -->
   <!-- build:js scripts/main.js -->
-  <script src="scripts/typer.js"></script>
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
 </body>
