@@ -17,17 +17,34 @@
 </head>
 
 <body>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <p><textarea id="top-text"></textarea></p>
-      <p></p><textarea id="bottom-text"></textarea></p>
-      <p></p><input type="file" id="image-input" accet="image/*"></p>
-      <p><button id="create-meme-btn">Make Meme!</button></p>
-      <p><canvas id="meme-canvas"></canvas></p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <form action="scripts/main.js">
+          <div class="form-group">
+            <label for="image-url">Image URL</label>
+            <input class="form-control" id="image-url" type="text" name="image-url"
+              placeholder="Enter the URL of the image you would like to use.">
+          </div>
+          <div class="form-group">
+            <label for="top-text">Meme Top Text</label>
+            <input class="form-control" id="top-text" type="text" name="top-text"
+              placeholder="(OPTIONAL) Text to appear at the top of the meme.">
+          </div>
+          <div class="form-group">
+            <label for="bottom-text">Meme Bottom Text</label>
+            <input class="form-control" id="bottom-text" type="text" name="bottom-text"
+              placeholder="(OPTIONAL) Text to appear at the bottom of the meme.">
+          </div>
+          <div class="form-group">
+            <button id="create-meme-btn">Make Meme!</button>
+          </div>
+        </form>
+      </div>
+      <div id="meme-canvas"></div>
     </div>
   </div>
-</div> 
+  </div>
   <!-- build:js scripts/vendor.js -->
   <!-- endbuild -->
   <!-- build:js scripts/main.js -->
