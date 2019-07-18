@@ -2,6 +2,12 @@
   position: relative;
   max-width: 500px;
   margin: auto;
+  background-image: url('000000')
+}
+
+.img-view::before {
+  background-image: url('https://via.placeholder.com/500?text=500+x+500+is+suggested');
+  background-size: auto;
 }
 
 .top-text {
@@ -38,4 +44,9 @@
   position: relative;
   margin: auto;
   float: right;
+  background-image: url('https://via.placeholder.com/500/000000/FFFFFF/?text=Delete?');
+}
+
+.meme-container img:hover {
+  opacity: 0.75;
 }

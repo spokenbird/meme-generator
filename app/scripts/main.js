@@ -42,16 +42,18 @@ memeForm.addEventListener('submit', function(e) {
   // Make a copy the img-view element and its child nodes
   const imgToCopy = document.querySelector('.img-view');
   const imgCopy = imgToCopy.cloneNode(true);
+  imgCopy.removeAttribute('id');
   imgCopy.className = `meme-num-${memeCounter}`;
   memeContainer.appendChild(imgCopy);
+  memeContainer.getElementsByTagName('img')[0].removeAttribute('id')
   memeCounter++;
 });
 
 
 
-function deleteMeme() {
-  tagToHover = memeContainer.getElementByTagName('img');
-  tagToHover.hover(function() {
-    
+memeContainer.addEventListener('mouseover', function(event) {
+  const meme = event.target.parentElement;
+  meme.addEventListener('click', function(event) {
+    memeContainer.removeChild(meme);
   });
-}
+});
