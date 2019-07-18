@@ -1,0 +1,31 @@
+#img-view {
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+}
+
+.top-text {
+  top: 15px;
+}
+
+.bottom-text {
+  bottom: 15px;
+}
+
+.top-text, .bottom-text {
+  position: absolute;
+  max-width: 100%;
+  text-align: center;
+  color: #FFF;
+  font-family: 'Impact', sans-serif;
+  font-size: 34px;
+  z-index: 10;
+  -webkit-text-stroke: 1.5px black;
+  padding: 0 15px;
+}
+
+.preview-image {
+  position: relative;
+  max-width: 500px;
+  z-index: 1;
+}

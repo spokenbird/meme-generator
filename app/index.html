@@ -4,24 +4,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Meme Generator</title>
-  <!-- Place favicon.ico in the root directory -->
-  <!-- build:css styles/vendor.css -->
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
-  <!-- endbuild -->
-  <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild -->
 </head>
 
 <body>
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div id="img-view"></div>
-        <form action="scripts/main.js">
+        <div id="img-view">
+          <div class="top-text"></div>
+          <img src="https://via.placeholder.com/500?text=500+x+500+is+suggested" id="preview-img" >
+          <div class="bottom-text"></div>
+        </div>
+        <form>
           <div class="form-group">
             <label for="image-url">Image URL</label>
             <div class="input-group mb-3">
@@ -33,13 +31,13 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="top-text">Meme Top Text</label>
-            <input class="form-control top-text" id="top-text" type="text" name="top-text"
+            <label for="top-text-input">Meme Top Text</label>
+            <input class="form-control" id="top-text-input" type="text" name="top-text-input"
               placeholder="(OPTIONAL) Text to appear at the top of the meme.">
           </div>
           <div class="form-group">
-            <label for="bottom-text">Meme Bottom Text</label>
-            <input class="form-control bottom-text" id="bottom-text" type="text" name="bottom-text"
+            <label for="bottom-text-input">Meme Bottom Text</label>
+            <input class="form-control" id="bottom-text-input" type="text" name="bottom-text-input"
               placeholder="(OPTIONAL) Text to appear at the bottom of the meme.">
           </div>
           <button class="create-meme-btn btn btn-primary" id="create-meme-btn">Make Meme!</button>
@@ -49,11 +47,7 @@
     </div>
   </div>
   </div>
-  <!-- build:js scripts/vendor.js -->
-  <!-- endbuild -->
-  <!-- build:js scripts/main.js -->
   <script src="scripts/main.js"></script>
-  <!-- endbuild -->
 </body>
 
 </html>
