@@ -1,4 +1,4 @@
-#img-view {
+.img-view {
   position: relative;
   max-width: 500px;
   margin: auto;
@@ -14,7 +14,7 @@
 
 .top-text, .bottom-text {
   position: absolute;
-  max-width: 100%;
+  width: 100%;
   text-align: center;
   color: #FFF;
   font-family: 'Impact', sans-serif;
@@ -34,6 +34,8 @@
   margin-top: 1rem;
 }
 
-.meme-container img {
-  max-width: 400px;
+[class^="meme-num"] {
+  position: relative;
+  margin: auto;
+  float: right;
 }

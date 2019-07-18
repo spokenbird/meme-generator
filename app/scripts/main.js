@@ -35,10 +35,23 @@ const memeContainer = document.querySelector('.meme-container');
 // Set form to submit variable
 const memeForm = document.querySelector('#meme-form');
 // Event listener to trigger make meme button
+let memeCounter = 1;
+
 memeForm.addEventListener('submit', function(e) {
   e.preventDefault();
   // Make a copy the img-view element and its child nodes
-  const imgToCopy = document.querySelector('#img-view');
+  const imgToCopy = document.querySelector('.img-view');
   const imgCopy = imgToCopy.cloneNode(true);
+  imgCopy.className = `meme-num-${memeCounter}`;
   memeContainer.appendChild(imgCopy);
+  memeCounter++;
 });
+
+
+
+function deleteMeme() {
+  tagToHover = memeContainer.getElementByTagName('img');
+  tagToHover.hover(function() {
+    
+  });
+}
