@@ -19,7 +19,7 @@
           <img src="https://via.placeholder.com/500?text=500+x+500+is+suggested" id="preview-img" >
           <div class="bottom-text"></div>
         </div>
-        <form>
+        <form id="meme-form">
           <div class="form-group">
             <label for="image-url">Image URL</label>
             <div class="input-group mb-3">
@@ -40,10 +40,10 @@
             <input class="form-control" id="bottom-text-input" type="text" name="bottom-text-input"
               placeholder="(OPTIONAL) Text to appear at the bottom of the meme.">
           </div>
-          <button class="create-meme-btn btn btn-primary" id="create-meme-btn">Make Meme!</button>
+          <button class="make-meme-btn btn btn-primary" id="make-meme-btn" type="submit">Make Meme!</button>
         </form>
       </div>
-      <div id="meme-container"></div>
+      <div class="meme-container"></div>
     </div>
   </div>
   </div>

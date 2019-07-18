@@ -1,14 +1,14 @@
 // Sets the Load Image Button
-let loadImageBtn = document.querySelector('.load-image');
+const loadImageBtn = document.querySelector('.load-image');
 
 // Event listener to trigger Load Image Button
-loadImageBtn.addEventListener('click', function (evt) {
+loadImageBtn.addEventListener('click', function(evt) {
   // Prevents page from reloading
-  evt.preventDefault()
+  evt.preventDefault();
   // Get image url from input
-  let imageURL = document.querySelector('.image-url').value;
+  const imageURL = document.querySelector('.image-url').value;
   // Variable to set an existing img
-  let existingImg = document.querySelector('#preview-img');
+  const existingImg = document.querySelector('#preview-img');
   // Set src to input value
   existingImg.src = imageURL;
   });
@@ -24,14 +24,21 @@ const bottomText = document.querySelector('.bottom-text');
 
 // Send user input text to corresponding text-input div
 topTextInput.oninput = () => {
-  console.log(topTextInput);
   topText.innerHTML = topTextInput.value;
 }
 bottomTextInput.oninput = () => {
   bottomText.textContent = bottomTextInput.value;
-  console.log(`The value of the bottom text input is currently ${bottomTextInput.value}`)
 }
 
-
-
-// MAKE MEME BUTTON --> Copy the image div to the lower section of the page
+// Set div to copy to variable
+const memeContainer = document.querySelector('.meme-container');
+// Set form to submit variable
+const memeForm = document.querySelector('#meme-form');
+// Event listener to trigger make meme button
+memeForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Make a copy the img-view element and its child nodes
+  const imgToCopy = document.querySelector('#img-view');
+  const imgCopy = imgToCopy.cloneNode(true);
+  memeContainer.appendChild(imgCopy);
+});

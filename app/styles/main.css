@@ -29,3 +29,11 @@
   max-width: 500px;
   z-index: 1;
 }
+
+.meme-container {
+  margin-top: 1rem;
+}
+
+.meme-container img {
+  max-width: 400px;
+}
