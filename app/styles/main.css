@@ -62,7 +62,7 @@ h1, h2 {
   justify-content: center;
 }
 
-[class^="meme-num"] {
+.meme-container > div {
   position: relative;
   margin: auto;
   float: left;
@@ -71,11 +71,11 @@ h1, h2 {
   
 }
 
-[class^="meme-num"]:nth-child(odd) {
+.meme-container > div:nth-child(odd) {
   margin-right: 10px;
 }
 
-[class^="meme-num"]:nth-child(even) {
+.meme-container > div:nth-child(even) {
   margin-left: 10px;
 }
 
