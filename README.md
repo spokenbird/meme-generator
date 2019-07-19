@@ -1,2 +1,1 @@
-# meme-generator
-A meme generator.
+Don't let your memes be dreams!

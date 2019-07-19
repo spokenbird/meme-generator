@@ -1,8 +1,11 @@
+// Sets the background element variable
+const background = document.querySelector('.background');
+
 // Sets the Load Image Button
 const loadImageBtn = document.querySelector('.load-image');
 
 // Event listener to trigger Load Image Button
-loadImageBtn.addEventListener('click', function(evt) {
+loadImageBtn.addEventListener('click', function (evt) {
   // Prevents page from reloading
   evt.preventDefault();
   // Get image url from input
@@ -11,8 +14,10 @@ loadImageBtn.addEventListener('click', function(evt) {
   const existingImg = document.querySelector('#preview-img');
   // Set src to input value
   existingImg.src = imageURL;
-  document.querySelector('.image-url').reset();
-  });
+  // Set the background image to be blurred
+  background.style.backgroundImage = `url('${imageURL}')`;
+
+});
 
 // Set text input variables for collecting user input
 const topTextInput = document.querySelector('#top-text-input');
@@ -34,28 +39,19 @@ bottomTextInput.oninput = () => {
 // Set div to copy to variable
 const memeContainer = document.querySelector('.meme-container');
 // Set form to submit variable
-const memeForm = document.querySelector('#meme-form');
+const makeMemeBtn = document.querySelector('#make-meme-btn');
 // Event listener to trigger make meme button
-let memeCounter = 1;
 
-memeForm.addEventListener('submit', function(e) {
+makeMemeBtn.addEventListener('click', function (e) {
   e.preventDefault();
   // Make a copy the img-view element and its child nodes
   const imgToCopy = document.querySelector('.img-view');
   const imgCopy = imgToCopy.cloneNode(true);
-  imgCopy.removeAttribute('id');
-  imgCopy.className = `meme-num-${memeCounter}`;
-  memeContainer.appendChild(imgCopy);
-  memeContainer.getElementsByTagName('img')[0].removeAttribute('id')
-  memeCounter++;
-  memeForm.reset();
-});
-
-
-
-memeContainer.addEventListener('mouseover', function(event) {
-  const meme = event.target.parentElement;
-  meme.addEventListener('click', function(event) {
+  imgCopy.removeAttribute('class');
+  imgCopy.addEventListener('click', function (event) {
+    let meme = event.target.parentElement;
     memeContainer.removeChild(meme);
   });
+  memeContainer.appendChild(imgCopy);
+  memeContainer.getElementsByTagName('img')[0].removeAttribute('id')
 });

@@ -6,7 +6,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Meme Generator</title>
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
@@ -14,11 +15,17 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div class="img-view">
-          <div class="top-text"></div>
-          <img src="https://via.placeholder.com/500?text=500+x+500+is+suggested" id="preview-img" >
-          <div class="bottom-text"></div>
+        <div class="image-view-outter">
+          <div class="img-view">
+            <div class="top-text"></div>
+            <img src="https://via.placeholder.com/500?text=500+x+500+is+suggested" id="preview-img">
+            <div class="bottom-text"></div>
+          </div>
+          <div class="background">
+          </div>
         </div>
+        <h1>Meme Supreme</h1>
+        <h2>Don't Let Your Memes be Dreams</h2>
         <form id="meme-form">
           <div class="form-group">
             <label for="image-url">Image URL</label>
@@ -42,10 +49,9 @@
           </div>
           <button class="make-meme-btn btn btn-primary" id="make-meme-btn" type="submit">Make Meme!</button>
         </form>
+        <div class="meme-container"></div>
       </div>
-      <div class="meme-container"></div>
     </div>
-  </div>
   </div>
   <script src="scripts/main.js"></script>
 </body>
