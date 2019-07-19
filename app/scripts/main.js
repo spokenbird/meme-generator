@@ -16,7 +16,7 @@ loadImageBtn.addEventListener('click', function (evt) {
   existingImg.src = imageURL;
   // Set the background image to be blurred
   background.style.backgroundImage = `url('${imageURL}')`;
-
+  document.querySelector('.image-url').value = '';
 });
 
 // Set text input variables for collecting user input
@@ -38,10 +38,11 @@ bottomTextInput.oninput = () => {
 
 // Set div to copy to variable
 const memeContainer = document.querySelector('.meme-container');
-// Set form to submit variable
+// Set form
+const memeForm = document.querySelector('#meme-form');
+// Set form button to submit variable
 const makeMemeBtn = document.querySelector('#make-meme-btn');
 // Event listener to trigger make meme button
-
 makeMemeBtn.addEventListener('click', function (e) {
   e.preventDefault();
   // Make a copy the img-view element and its child nodes
@@ -54,4 +55,5 @@ makeMemeBtn.addEventListener('click', function (e) {
   });
   memeContainer.appendChild(imgCopy);
   memeContainer.getElementsByTagName('img')[0].removeAttribute('id')
+  memeForm.reset();
 });
