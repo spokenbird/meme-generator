@@ -1,13 +1,27 @@
-.img-view {
-  position: relative;
-  max-width: 500px;
-  margin: auto;
-  background-image: url('000000')
+.image-view-outter {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
-.img-view::before {
+.background {
   background-image: url('https://via.placeholder.com/500?text=500+x+500+is+suggested');
-  background-size: auto;
+  background-repeat: space;
+  filter: blur(100px);
+  min-width: 100%;
+  min-height: 500px;
+}
+
+h1, h2 {
+  color: #777;
+  text-align: center;
+}
+
+.img-view {
+  position: absolute;
+  max-width: 500px;
+  margin: auto;
+  z-index: 1;
 }
 
 .top-text {
@@ -36,17 +50,38 @@
   z-index: 1;
 }
 
+#meme-form {
+  margin-top: 1rem;
+}
+
 .meme-container {
   margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 [class^="meme-num"] {
   position: relative;
   margin: auto;
-  float: right;
+  float: left;
   background-image: url('https://via.placeholder.com/500/000000/FFFFFF/?text=Delete?');
+  margin-bottom: 20px;
+  
+}
+
+[class^="meme-num"]:nth-child(odd) {
+  margin-right: 10px;
+}
+
+[class^="meme-num"]:nth-child(even) {
+  margin-left: 10px;
 }
 
 .meme-container img:hover {
-  opacity: 0.75;
+  opacity: 0.25;
+}
+
+.meme-container:nth-child(odd) {
+  margin-right: 15px;
 }

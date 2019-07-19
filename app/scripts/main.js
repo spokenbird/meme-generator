@@ -1,3 +1,6 @@
+// Sets the background element variable
+const background = document.querySelector('.background');
+
 // Sets the Load Image Button
 const loadImageBtn = document.querySelector('.load-image');
 
@@ -11,6 +14,9 @@ loadImageBtn.addEventListener('click', function(evt) {
   const existingImg = document.querySelector('#preview-img');
   // Set src to input value
   existingImg.src = imageURL;
+  // Set the background image to be blurred
+  background.style.backgroundImage = `url('${imageURL}')`;
+
   });
 
 // Set text input variables for collecting user input
