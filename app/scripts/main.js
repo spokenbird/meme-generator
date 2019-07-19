@@ -59,8 +59,5 @@ memeForm.addEventListener('submit', function(e) {
 
 memeContainer.addEventListener('click', function(event) {
   const meme = event.target.parentElement;
-  console.log(meme);
-  meme.addEventListener('click', function(event) {
     memeContainer.removeChild(meme);
-  });
 });
