@@ -57,7 +57,7 @@ makeMemeBtn.addEventListener('click', function (e) {
   memeContainer.getElementsByTagName('img')[0].removeAttribute('id')
   bottomText.textContent = '';
   topText.textContent = '';
-  console.log(existingImg, existingImg.value);
   existingImg.src = 'https://via.placeholder.com/500?text=500+x+500+is+suggested';
+  background.style.backgroundImage = "url('https://via.placeholder.com/500?text=500+x+500+is+suggested')";
   memeForm.reset();
 });
