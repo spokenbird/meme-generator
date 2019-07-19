@@ -4,21 +4,21 @@ const background = document.querySelector('.background');
 // Sets the Load Image Button
 const loadImageBtn = document.querySelector('.load-image');
 
+// Variable to set an existing img
+const existingImg = document.querySelector('#preview-img');
+
 // Event listener to trigger Load Image Button
 loadImageBtn.addEventListener('click', function (evt) {
   // Prevents page from reloading
   evt.preventDefault();
   // Get image url from input
-  const imageURL = document.querySelector('.image-url').value;
-  // Variable to set an existing img
-  const existingImg = document.querySelector('#preview-img');
+  let imageURL = document.querySelector('.image-url').value;
   // Set src to input value
   existingImg.src = imageURL;
   // Set the background image to be blurred
   background.style.backgroundImage = `url('${imageURL}')`;
   document.querySelector('.image-url').value = '';
 });
-
 // Set text input variables for collecting user input
 const topTextInput = document.querySelector('#top-text-input');
 const bottomTextInput = document.querySelector('#bottom-text-input');
@@ -55,5 +55,9 @@ makeMemeBtn.addEventListener('click', function (e) {
   });
   memeContainer.appendChild(imgCopy);
   memeContainer.getElementsByTagName('img')[0].removeAttribute('id')
+  bottomText.textContent = '';
+  topText.textContent = '';
+  console.log(existingImg, existingImg.value);
+  existingImg.src = 'https://via.placeholder.com/500?text=500+x+500+is+suggested';
   memeForm.reset();
 });
