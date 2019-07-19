@@ -76,8 +76,6 @@ if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and 
   visibilityChange = "webkitvisibilitychange";
 }
  
-var videoElement = document.getElementById("videoElement");
-
 // If the page is hidden, pause the video;
 // if the page is shown, play the video
 function handleVisibilityChange() {
@@ -90,7 +88,7 @@ function handleVisibilityChange() {
 
 // Warn if the browser doesn't support addEventListener or the Page Visibility API
 if (typeof document.addEventListener === "undefined" || hidden === undefined) {
-  console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+  console.log("Update your browser :(");
 } else {
   // Handle page visibility change   
   document.addEventListener(visibilityChange, handleVisibilityChange, false);
