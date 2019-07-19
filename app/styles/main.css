@@ -20,8 +20,14 @@ h1, h2 {
 .img-view {
   position: absolute;
   max-width: 500px;
+  max-height: 500px;
   margin: auto;
   z-index: 1;
+}
+
+.img-view img {
+  max-width: 500px;
+  max-height: 500px;
 }
 
 .top-text {
@@ -48,6 +54,7 @@ h1, h2 {
 .preview-image {
   position: relative;
   max-width: 500px;
+  max-height: 500px;
   z-index: 1;
 }
 
@@ -77,6 +84,11 @@ h1, h2 {
 
 .meme-container > div:nth-child(even) {
   margin-left: 10px;
+}
+
+.meme-container img {
+  max-width: 500px;
+  max-height: 500px;
 }
 
 .meme-container img:hover {
