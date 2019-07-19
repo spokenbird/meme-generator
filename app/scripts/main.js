@@ -11,6 +11,7 @@ loadImageBtn.addEventListener('click', function(evt) {
   const existingImg = document.querySelector('#preview-img');
   // Set src to input value
   existingImg.src = imageURL;
+  document.querySelector('.image-url').reset();
   });
 
 // Set text input variables for collecting user input
@@ -47,6 +48,7 @@ memeForm.addEventListener('submit', function(e) {
   memeContainer.appendChild(imgCopy);
   memeContainer.getElementsByTagName('img')[0].removeAttribute('id')
   memeCounter++;
+  memeForm.reset();
 });
 
 
