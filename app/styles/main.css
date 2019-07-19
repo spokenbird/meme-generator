@@ -92,7 +92,3 @@ h1, h2 {
 .meme-container img:hover {
   opacity: 0.25;
 }
-
-.meme-container:nth-child(odd) {
-  margin-right: 15px;
-}
